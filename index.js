@@ -5,8 +5,6 @@ const port = (process.env.port || 3000);
 
 const bodyParser = require('body-parser');
 
-
-
 // express
 const app = express();
 
@@ -15,7 +13,6 @@ app.use(express.json());
 
 //config
 app.set('port', port);
-
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
