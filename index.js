@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 
 // rutas
-app.use('/api',require('./ruta.js'))
+app.use('/api',require('./ruta.js'));
 
 
 
