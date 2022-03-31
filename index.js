@@ -3,6 +3,7 @@ require('./config/conexion');
 const express = require('express');
 const port = (process.env.port || 3000);
 
+const cors = require('cors');
 const bodyParser = require('body-parser');
 
 // express
@@ -15,10 +16,13 @@ app.use(express.json());
 app.set('port', port);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use(cors());
+
 
 
 // rutas
 app.use('/api',require('./ruta.js'));
+app.use('/signin',require('./ruteSignin.js'));
 
 
 
