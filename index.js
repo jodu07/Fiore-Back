@@ -23,6 +23,8 @@ app.use(cors());
 // rutas
 app.use('/api',require('./ruta.js'));
 app.use('/signin',require('./ruteSignin.js'));
+app.use('/historial',require('./rutaHistorial.js'));
+
 
 
 
